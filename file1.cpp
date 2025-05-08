@@ -17,7 +17,6 @@ class list{
     list(){
         START = NULL;
     }
-};
 
 void addnode(){
     int nim;
@@ -26,4 +25,19 @@ void addnode(){
 
     node *nodebaru = new node;
     nodebaru ->noMhs = nim;
+
+    if (START == NULL || nim <= START ->noMhs)
+    {
+        if ((START != NULL) && (nim == START ->noMhs)){
+            cout << "\nDuplikasi noMhs tidak diijinkan\n";
+            return;
+        }
+        nodebaru -> next= START;
+        START= nodebaru;
+        return;
+    }  
+    
+    node *previous = START;
+    node *current = START;
 }
+};

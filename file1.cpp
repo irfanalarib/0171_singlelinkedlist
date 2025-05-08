@@ -54,4 +54,21 @@ void addnode(){
         previous->next =nodebaru;
     }
 }
+
+bool listEmpty(){
+    return (START == NULL); 
+}
+
+bool Search(int nim, node **previou, node **current)
+{
+    *previou = START;
+    *current = (*current)->next;
+
+    while ((*current != NULL) && (nim !=(*current)->noMhs))
+    {
+        *previou = *current;
+        *current = (*current)->next;
+    }
+    return (*current != NULL);
+}
 };

@@ -101,3 +101,9 @@ void traverse(){
     }
 }
 };
+
+int main(){
+    singleLinkedlist mhs;
+    int nim;
+    char ch;
+}

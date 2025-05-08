@@ -18,3 +18,12 @@ class list{
         START = NULL;
     }
 };
+
+void addnode(){
+    int nim;
+    cout << "\nMasukan Nomer Mahasiswa : ";
+    cin >> nim;
+
+    node *nodebaru = new node;
+    nodebaru ->noMhs = nim;
+}

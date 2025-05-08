@@ -10,11 +10,11 @@ class node
         node *next;
 };
 
-class list{
+class singleLinkedlist{
     node *START;
 
     public:
-    list(){
+    singleLinkedlist(){
         START = NULL;
     }
 
@@ -57,5 +57,18 @@ void addnode(){
 
 bool listEmpty(){
     return (START == NULL); 
+}
+
+bool Search(int nim, node **previous, node **current)
+{
+    *previous = START;
+    *current = (*current)->next;
+
+    while ((*current != NULL) && (nim !=(*current)->noMhs))
+    {
+        *previous = *current;
+        *current = (*current)->next;
+    }
+    return (*current != NULL);
 }
 };
